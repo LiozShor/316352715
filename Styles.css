@@ -6,7 +6,13 @@ body, h1, h2, h3, p, ul {
   body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
     line-height: 1.5;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
   }
+
+
+  
   
   header {
     background-color: #86d992;
@@ -58,7 +64,23 @@ body, h1, h2, h3, p, ul {
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
+
   }
+
+  .title-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 15px; 
+    direction: ltr; /* אם אתה רוצה שהתמונה תהיה מימין והטקסט משמאל */
+  }
+  
+  .title-with-image img {
+    height: 150px;
+    border-radius: 50%; /* עיגול יפה אם זו תמונת פנים */
+  }
+  
 
   .section-title {
     border-top: 2px solid #ccc;
