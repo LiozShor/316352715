@@ -1,0 +1,166 @@
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    line-height: 1.5;
+  }
+  
+  header {
+    background-color: #86d992;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+  }
+  
+  
+  .site-name {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:2;
+    flex-direction: row-reverse;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+  section
+  {
+    scroll-margin-top: 70px; /* קצת יותר מהגובה של ההדר */
+
+  }
+  
+.name {
+    font-size: 50px;
+    color: darkslategray;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .section-title {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #like-button {
+    font-size: 1.2rem;
+    background-color: white;
+    border: 2px solid #e91e63;
+    color: #e91e63;
+    padding: 8px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 20px auto;
+    display: block;
+
+
+  }
+  
+  #like-button.liked {
+    display: block;
+    background-color: #e91e63;
+    color: white;
+    margin: 20px auto;
+
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto; 
+    padding: 20px;
+  }
+
+    .image-container {
+      margin: 20px auto;
+      display: block;
+      text-align: center; 
+    }
+  
+    .vid-container {
+      margin: 20px auto;
+      display: block;
+      text-align: center; 
+    }
+
+    .qr-code-container
+    {
+      margin: 20px auto;
+      display: block;
+      text-align: center; 
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    form label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    
+    form input, form textarea {
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    form button {
+      padding: 12px;
+      background-color: #8cc63f;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    form button:hover {
+      background-color: #7aaf37;
+    }
+    
+
+  
+  
+  
+
+  
+  
