@@ -22,13 +22,21 @@
        
       <div class="site-name"></div>
         <nav class="navbar">
-          <a href="#about">About Me</a> |
-          <a href="#photos">My Photos</a> |
-          <a href="#playlist">My Favorite Song</a> |
-          <a href="#like">Like</a> |
-          <a href="#qr">QR Code</a> |
-          <a href="#qa">QA</a> |
-          <a href="#contact">Contact</a>
+          <nav>
+            <a href="#about">About Me</a>
+            <span class="heart">💗</span>
+            <a href="#photos">My Photos</a>
+            <span class="heart">💗</span>
+            <a href="#song">My Favorite Song</a>
+            <span class="heart">💗</span>
+            <a href="#like">Like</a>
+            <span class="heart">💗</span>
+            <a href="#qr">QR Code</a>
+            <span class="heart">💗</span>
+            <a href="#qa">Q&A</a>
+            <span class="heart">💗</span>
+            <a href="#contact">Contact</a>
+          </nav>
         </nav>
       </header>
 
@@ -40,18 +48,15 @@
 
       <section id="about">
           <h2 class="section-title">מי אני? </h2>
-            <p>בן 67</p>
-            <p><strong>מקום מגורים:</strong> הרצליה</p>
-            <p><strong>עיסוק בעבר:</strong> יזם הייטק</p>
-            <p><strong>כיום:</strong> מנטור ליזמים צעירים, מתנדב בעמותת הצלת כלבים, וכותב בלוג אישי על התחלה חדשה ואהבות מאוחרות.</p>
+            <p>בן 67, הרצליה</p>
+            <p>מנטור ליזמים צעירים, מתנדב בעמותת הצלת כלבים, וכותב בלוג אישי על התחלה חדשה ואהבות מאוחרות.</p>
         
             <h3>רקע</h3>
             <p>
-              נולד וגדל בקריית חיים לזוג מורים. שירת כקצין במודיעין, ולאחר מכן למד הנדסת מחשבים בטכניון.
-              אחרי סטארט-אפ ראשון שלא הצליח, בגיל 40 הקים חברה מצליחה שסיפקה פתרונות טכנולוגיים לחברות ביטוח ברחבי העולם.
+              נולדתי וגדלתי בקריית חיים לזוג מורים. שירתי כקצין במודיעין, ולאחר מכן למדתי הנדסת מחשבים בטכניון.
+              אחרי סטארט-אפ ראשון שלא הצליח, בגיל 40 הקמתי חברה מצליחה שסיפקה פתרונות טכנולוגיים לחברות ביטוח ברחבי העולם.
             </p>
         
-            <h3>אופי</h3>
             <p>
               רגיש, מצחיק, אוהב אדם ויודע להקשיב. קצת עקשן, אבל תמיד מתוך מקום של אכפתיות.
             </p>
@@ -72,10 +77,13 @@
             <h3>דמות משפיעה</h3>
             <p>סבתא רחל – ניצולת שואה שלימדה אותי מה זו ענווה, עוצמה שקטה והומור שמרפא.</p>
         
-            <h3>משפט שמגדיר אותי</h3>
-            <blockquote>
-              "לא מאוחר מדי להתחיל מחדש – רק צריך להיות מוכן להתרגש שוב."
-            </blockquote>
+            <section class="quote-section">
+              <h2>משפט שמגדיר אותי</h2>
+              <blockquote>
+                "לא מאוחר מדי להתחיל מחדש – רק צריך להיות מוכן להתרגש שוב."
+              </blockquote>
+            </section>
+            
 
         </section>
 
@@ -88,7 +96,7 @@
         </section>
         
 
-        <section id="playlist">
+        <section id="song">
           <h2 class="section-title">השיר האהוב עליי בכל העולם</h2>
 
           <div class="vid-container">
@@ -98,7 +106,7 @@
 
 
         <section id="like">
-          <h2 class="section-title">אהבת?</h2>
+          <h2 class="section-title">גרמתי לך לחייך?</h2>
           <button id="like-button">❤️ לייק (<span id="like-count">0</span>)</button>
         </section>
         
@@ -119,12 +127,12 @@
 
         </section>
 
-        <section id="QA">
+        <section id="qa">
           <h2 class="section-title">Q&A</h2>
 
         </section>
 
-        <section id="Contact">
+        <section id="contact">
           <h2 class="section-title">אז נדבר?</h2>
           <form action="https://formspree.io/f/xdkeleyb" method="POST">
             <label for="name">שם:</label>
@@ -136,8 +144,21 @@
             <label for="message">הודעה:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
         
-            <button type="submit">שלח</button>
+            <button type="submit">שלחי ❤️</button>
         </form>
+
+        <div class="emoji-picker">
+          <span onclick="addEmoji('😉')" title="Wink">😉</span>
+          <span onclick="addEmoji('💋')" title="Kiss">💋</span>
+          <span onclick="addEmoji('😏')" title="Smirk">😏</span>
+          <span onclick="addEmoji('🍑')" title="Peach">🍑</span>
+          <span onclick="addEmoji('💦')" title="Sweat">💦</span>
+          <span onclick="addEmoji('🍆')" title="Eggplant">🍆</span>
+          <span onclick="addEmoji('👅')" title="Tongue">👅</span>
+
+          
+        </div>
+        
         
         </section>
         
@@ -167,10 +188,26 @@
   });
 </script>
 
+<script>
+  function addEmoji(emoji) {
+    const messageBox = document.getElementById("message");
+    const cursorPos = messageBox.selectionStart;
+    const textBefore = messageBox.value.substring(0, cursorPos);
+    const textAfter = messageBox.value.substring(cursorPos);
+    messageBox.value = textBefore + emoji + textAfter;
+    messageBox.focus();
+    messageBox.selectionEnd = cursorPos + emoji.length;
+  }
+</script>
 
 
 
 
 
+
+
+<footer>
+  Made with 💖 by Lioz Shor | © 2025 LoveStory
+</footer>
 
 </html>

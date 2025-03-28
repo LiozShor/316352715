@@ -9,13 +9,60 @@ body, h1, h2, h3, p, ul {
     background-color: #f6f6f6;
     margin: 0;
     padding: 0;
+    position: relative;
+    min-height: 100vh;
+    
+    
   }
 
+  body {
+    position: relative;
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* הלוגו השמאלי העליון */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 250px;
+    height: 250px;
+    background-image: url('background.png'); /* שים את שם הקובץ שלך */
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.06;
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(-10deg);
+
+  }
+  
+  /* הלוגו הימני התחתון */
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 250px;
+    height: 250px;
+    background-image: url('background.png'); /* אותו קובץ */
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.06;
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(-10deg);
+
+  }
+  
 
   
   
   header {
-    background-color: #86d992;
+    background-color: #d62828;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -32,27 +79,55 @@ body, h1, h2, h3, p, ul {
     font-weight: bold;
   }
   
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex:2;
-    flex-direction: row-reverse;
+  nav {
+    background: linear-gradient(90deg, #f28482, #ffcad4); /* רך ועדין */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08); /* צל קליל מתחת */
+    padding: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
   }
   
-  .navbar a {
+  nav a {
     color: white;
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 10px;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
   }
   
-  .navbar a:hover {
-    text-decoration: underline;
+  nav a:hover {
+    color: #fff;
   }
+  
+  /* פס תחתון מונפש */
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* לבבות */
+  .heart {
+    color: white;
+    margin: 0 5px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  
 
   section
   {
-    scroll-margin-top: 70px; /* קצת יותר מהגובה של ההדר */
+    scroll-margin-top: 85px; /* קצת יותר מהגובה של ההדר */
 
   }
   
@@ -80,6 +155,42 @@ body, h1, h2, h3, p, ul {
     height: 150px;
     border-radius: 50%; /* עיגול יפה אם זו תמונת פנים */
   }
+  .quote-section {
+    background-color: #fff6f8;
+    padding: 20px 25px;
+    border-left: 4px solid #f28482;
+    max-width: 500px;
+    margin: 40px auto;
+    border-radius: 8px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #444;
+  }
+  
+  .quote-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: right;
+  }
+  
+  .quote-section blockquote {
+    font-style: italic;
+    font-size: 16px;
+    margin: 0;
+    padding-right: 10px;
+    position: relative;
+  }
+  
+  .quote-section blockquote::before {
+    content: "❝";
+    position: absolute;
+    right: -20px;
+    top: -5px;
+    font-size: 24px;
+    color: #f28482;
+  }
+  
+  
   
 
   .section-title {
@@ -178,6 +289,34 @@ body, h1, h2, h3, p, ul {
     form button:hover {
       background-color: #7aaf37;
     }
+
+    .emoji-picker {
+      display: flex;
+      justify-content: center;  
+      gap: 10px;               
+      margin-top: 10px;
+    }
+    
+    
+    .emoji-picker span {
+      font-size: 24px;
+      cursor: pointer;
+      margin: 5px;
+      transition: transform 0.1s ease-in-out;
+    }
+    
+    .emoji-picker span:hover {
+      transform: scale(1.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+    
+    
     
 
   
