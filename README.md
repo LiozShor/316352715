@@ -44,7 +44,7 @@ The website introduces Duvik Rosen, a 67-year-old widower from Herzliya who is a
 - Designing for RTL languages
 - Creating a multi-section page with good user experience and visual design
 
--Created by Lioz Shor, 2025
--ID 316352715
--https://liozshor.github.io/316352715/
+- Created by Lioz Shor, 2025
+- ID 316352715
+- https://liozshor.github.io/316352715/
 
