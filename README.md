@@ -9,25 +9,25 @@ The website introduces Duvik Rosen, a 67-year-old widower from Herzliya who is a
 ## Folder Structure
 
 Project Root
-│
-├── index.html                Main HTML file (written in Hebrew, right-to-left)
-│
-├── css/                      Folder for stylesheets
-│   ├── main.css              General styles
-│   ├── layout.css            Layout-specific styles
-│   ├── typography.css        Fonts and text styling
-│   └── components.css        Specific components like buttons and modals
-│
-├── js/
-│   └── script.js             JavaScript logic for interactivity
-│
-├── imgs/                     Image assets
-│   ├── zeevfirstpic.png      Main profile image
-│   ├── img1.png              Gallery image
-│   ├── img2.png              Gallery image
-│   ├── img3.png              Gallery image
-│   ├── img4.png              Gallery image
-│   └── LiozLoveStory_qrcode.png   QR code image
+  index.html                Main HTML file (written in Hebrew, right-to-left)
+
+  css/                      Folder for stylesheets
+    main.css                General styles
+    layout.css              Layout-specific styles
+    typography.css          Fonts and text styling
+    components.css          Components like buttons and modals
+
+  js/
+    script.js               JavaScript logic for interactivity
+
+  imgs/
+    zeevfirstpic.png        Main profile image
+    img1.png                Gallery image
+    img2.png                Gallery image
+    img3.png                Gallery image
+    img4.png                Gallery image
+    LiozLoveStory_qrcode.png   QR code image
+
 
 
 ## Features
