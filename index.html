@@ -3,52 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoveStory Zeev Page</title>
-    <link rel="stylesheet" href="Styles.css" />
+    <title>LoveStory Duvik Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
 
 </head>
 <body>
 
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" 
-       src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
-  </script>
-
-
-<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js" async></script>
-<div class="container">
 
     <header>
        
       <div class="site-name"></div>
         <nav class="navbar">
           <nav>
-            <a href="#about">About Me</a>
-            <span class="heart">💗</span>
-            <a href="#photos">My Photos</a>
-            <span class="heart">💗</span>
-            <a href="#song">My Favorite Song</a>
-            <span class="heart">💗</span>
-            <a href="#like">Like</a>
-            <span class="heart">💗</span>
-            <a href="#qr">QR Code</a>
-            <span class="heart">💗</span>
-            <a href="#qa">Q&A</a>
-            <span class="heart">💗</span>
-            <a href="#contact">Contact</a>
+            <div class="nav-item"><a href="#about">About Me</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#photos">My Photos</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#song">My Favorite Song</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#like">Like</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#qr">QR Code</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#dovik-quiz">Love Game</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#fun-fact">Fun Fact</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#contact">Contact</a><span class="heart">💗</span></div>
+            <div class="nav-item"><a href="#qa">Q&A</a><span class="heart">💗</span></div>
+            
           </nav>
         </nav>
       </header>
+      <div class="container">
+
 
       <div class="title-with-image">
-        <img src="zeevfirstpic.png" alt="Profile photo">
+        <img src="imgs/zeevfirstpic.png" alt="Profile photo">
         <h1>דוביק רוזן</h1>
       </div>
       
 
       <section id="about">
           <h2 class="section-title">מי אני? </h2>
-            <p>בן 67, הרצליה</p>
+            <p>בן 67, הרצליה, אלמן</p>
             <p>מנטור ליזמים צעירים, מתנדב בעמותת הצלת כלבים, וכותב בלוג אישי על התחלה חדשה ואהבות מאוחרות.</p>
         
             <h3>רקע</h3>
@@ -77,22 +71,24 @@
             <h3>דמות משפיעה</h3>
             <p>סבתא רחל – ניצולת שואה שלימדה אותי מה זו ענווה, עוצמה שקטה והומור שמרפא.</p>
         
-            <section class="quote-section">
-              <h2>משפט שמגדיר אותי</h2>
-              <blockquote>
-                "לא מאוחר מדי להתחיל מחדש – רק צריך להיות מוכן להתרגש שוב."
-              </blockquote>
-            </section>
-            
+            <h3>משפט שמגדיר אותי</h3>
+            <blockquote>
+              "לא מאוחר מדי להתחיל מחדש – רק צריך להיות מוכן להתרגש שוב."
+            </blockquote>
 
         </section>
 
         <section id="photos">
           <h2 class="section-title">הנה אני</h2>
-          <div class="image-container">
-            <img src="ZeevPic.png" alt="A photo of me" width="300" />
-            <img src="ZeevPic (2).png" alt="Another photo of me" width="300" />
+
+          <div class="gallery">
+            <img src="imgs/img1.png">
+            <img src="imgs/img2.png">
+            <img src="imgs/img3.png">
+            <img src="imgs/img4.png">
+            
           </div>
+          
         </section>
         
 
@@ -107,7 +103,7 @@
 
         <section id="like">
           <h2 class="section-title">גרמתי לך לחייך?</h2>
-          <button id="like-button">❤️ לייק (<span id="like-count">0</span>)</button>
+          <button id="like-button" class="button">❤️ לייק (<span id="like-count">0</span>)</button>
         </section>
         
         
@@ -120,17 +116,78 @@
           <div class="qr-code-container">
 
 
-          <img src="LiozLoveStory_qrcode.png" alt="QR CODE" width="300" />
+          <img src="imgs/LiozLoveStory_qrcode.png" alt="QR CODE" width="300" />
 
         </div>
 
 
         </section>
 
-        <section id="qa">
-          <h2 class="section-title">Q&A</h2>
+      
+        </section>
+        <section id="dovik-quiz">
+          <h2 class="section-title">Love Game</h2>
+
+          
+        <section class="dovik-quiz">
+
+          <button id="open-quiz" class="button">💗 בדקי התאמה עם דוביק 💗</button>
+          <div id="quiz-modal" class="popup hidden">
+            <div class="popup-content">
+              <form id="quiz-form">
+                <div class="question">
+                  <p>מה את מחפשת בפרק ב'?</p>
+                  <label><input type="radio" name="q1" value="1"> מישהו ללכת איתו ברגל ולשתוק ביחד</label>
+                  <label><input type="radio" name="q1" value="0"> חבר לקבוצת ווטסאפ</label>
+                  <label><input type="radio" name="q1" value="0"> אחד שיזמין חשבון לפני שסיימתי לשתות</label>
+                </div>
+            
+                <div class="question">
+                  <p>דוביק מזמין אותך להליכה בפארק, את...</p>
+                  <label><input type="radio" name="q2" value="1"> מביאה לו מים קרים מהבית</label>
+                  <label><input type="radio" name="q2" value="0"> שואלת אם תהיה חניה</label>
+                  <label><input type="radio" name="q2" value="0"> אומרת "רק אם אתה לוקח אותי לקניון אחר כך"</label>
+                </div>  
+                <div class="question"> 
+                <p>מה את אומרת כשהוא מספר שהוא מאכיל חתולי רחוב?</p>
+                <label><input type="radio" name="q3" value="1"> איזה לב גדול יש לך</label>
+                <label><input type="radio" name="q3" value="0"> אני יותר של כלבים</label>
+                <label><input type="radio" name="q3" value="0"> אתה גם מנקה אחריהם?</label>
+              </div>
+          
+              <div class="question">
+                <p>הוא שולח לך הודעה: "חשבתי עלייך..."</p>
+                <label><input type="radio" name="q4" value="1"> אני מקשיבה</label>
+                <label><input type="radio" name="q4" value="0"> בדיוק הייתי באמצע חדשות</label>
+                <label><input type="radio" name="q4" value="0"> אז למה אתה לא מתקשר?</label>
+              </div> 
+              <div class="question">    
+              <p>איך את שותה את הקפה שלך?</p>
+              <label><input type="radio" name="q5" value="1"> כמו הלב שלי – חם, בלי הרבה סוכר</label>
+              <label><input type="radio" name="q5" value="0"> רק אם יש עוגה בצד</label>
+              <label><input type="radio" name="q5" value="0"> אני שותה תה, תודה</label>
+            </div>
+                <button type="submit" class="button">שלחי ❤️</button>
+              </form>
+            </div>
+          </div>
+                  </form>
+        </section>
+        
+        <!-- Pop-up result box -->
+        <div id="quiz-popup" class="popup hidden">
+          <div class="popup-content" id="quiz-result"></div>
+        </div>
 
         </section>
+
+        <section id="fun-fact">
+        <h2 class="section-title">Fun Fact</h2>
+        <section class="love-game">
+          <p id="dovik-fact">לחצי על הכפתור כדי לגלות משהו חדש על דוביק!</p>
+          <button onclick="showFact()" class="button">💘 Tell me more 💘 </button>
+        </section>
+        
 
         <section id="contact">
           <h2 class="section-title">אז נדבר?</h2>
@@ -144,7 +201,7 @@
             <label for="message">הודעה:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
         
-            <button type="submit">שלחי ❤️</button>
+            <button type="submit" class="button">שלחי ❤️</button>
         </form>
 
         <div class="emoji-picker">
@@ -165,44 +222,44 @@
 
 
 
-        
+        <section id="qa">
+          <h2 class="section-title">Q&A</h2>
+          <table class="qatable">
+            <tr>
+              <th>Web1</th>
+              <th>Web2</th>
+              <th>Web3</th>
+            </tr>
+            <td>Static web pages - The contact was rarely updated or changed.
+              Basic functionality - mainly text and images.
+
+            </td>
+            <td>User generate contact - websites became more dynamic, with users able to contribute their own content.
+            <td>If on Web1 only the developer could edit the page, and on Web2 also the user could edit the page, on Web3 another player joined the game - the AI.
+              <p>Websites became more intelligent, with the ability to understand the context of content and provide more personalized experience for users.             </p>
+            </td>
+
+            <tr>
+              <td><p>Use case example - facebook page would look like a static page. if you want to explore more about this person - you can't. all you can is to see his photos.</p>
+                <p>This facebook page, also, was published by the developers and not the users.</p></td>
+              <td><p>Use case example - now people could take care of their own facebook page, and upload some content and images</p></td>
+            </td>
+              <td><p>Use case example - On Facebook, for example, the users now can explore other friends or content, based on their consumed content on the present.</p>
+              </td>
+            </tr>
+          </table>
+
 
         
 
 
+        
+
+
+        <script src="js/script.js"></script>
 
 </div>
 </body>
-
-<script>
-  const likeButton = document.getElementById('like-button');
-  const likeCount = document.getElementById('like-count');
-
-  let count = parseInt(localStorage.getItem('likeCount')) || 0;
-  likeCount.textContent = count;
-
-  likeButton.addEventListener('click', () => {
-    count++;
-    likeCount.textContent = count;
-    localStorage.setItem('likeCount', count);
-  });
-</script>
-
-<script>
-  function addEmoji(emoji) {
-    const messageBox = document.getElementById("message");
-    const cursorPos = messageBox.selectionStart;
-    const textBefore = messageBox.value.substring(0, cursorPos);
-    const textAfter = messageBox.value.substring(cursorPos);
-    messageBox.value = textBefore + emoji + textAfter;
-    messageBox.focus();
-    messageBox.selectionEnd = cursorPos + emoji.length;
-  }
-</script>
-
-
-
-
 
 
 
