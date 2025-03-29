@@ -8,40 +8,25 @@ The website introduces Duvik Rosen, a 67-year-old widower from Herzliya who is a
 
 ## Folder Structure
 
-Project Root
-  index.html                Main HTML file (written in Hebrew, right-to-left)
+- index.html  
+  This is the main HTML file of the website. It is written in Hebrew and uses right-to-left (RTL) direction. It includes all the sections of the site, such as About, Gallery, Song, Quiz, Contact Form, and more.
 
-  css/                      Folder for stylesheets
-    main.css                General styles
-    layout.css              Layout-specific styles
-    typography.css          Fonts and text styling
-    components.css          Components like buttons and modals
+- css/  
+  This folder contains all the stylesheets used in the project. The CSS is organized by category:
+  - main.css – General styling rules applied across the whole website.
+  - layout.css – Handles the layout structure, positioning, and grid settings.
+  - typography.css – Defines font families, sizes, colors, and headings.
+  - components.css – Contains styles for specific UI components like buttons, modals, quiz layout, and emoji picker.
 
-  js/
-    script.js               JavaScript logic for interactivity
+- js/  
+  This folder includes JavaScript files. Currently, it contains:
+  - script.js – Adds interactivity to the site, including the like button, quiz logic, and fun fact functionality.
 
-  imgs/
-    zeevfirstpic.png        Main profile image
-    img1.png                Gallery image
-    img2.png                Gallery image
-    img3.png                Gallery image
-    img4.png                Gallery image
-    LiozLoveStory_qrcode.png   QR code image
-
-
-
-## Features
-
-- Navigation bar with anchor links
-- Personal biography section in Hebrew
-- Photo gallery
-- Embedded YouTube video of a favorite song
-- Like button with dynamic count
-- QR code for easy sharing
-- Interactive love quiz
-- Fun fact button revealing random facts about Duvik
-- Contact form with emoji picker
-- Educational comparison table of Web1, Web2, and Web3
+- imgs/  
+  This folder holds all image assets used in the project:
+  - zeevfirstpic.png – Main profile image shown at the top of the page.
+  - img1.png to img4.png – Images used in the personal photo gallery.
+  - LiozLoveStory_qrcode.png – A QR code image that allows sharing the site.
 
 ## Technologies Used
 
@@ -50,12 +35,6 @@ Project Root
 - JavaScript for dynamic behavior
 - Responsive design for different screen sizes
 - Form submission via Formspree
-
-## Notes
-
-- All content is written in Hebrew and designed to work in right-to-left orientation
-- This is a purely static website with no backend
-- The design and content were created from scratch to reflect the unique personality of the subject
 
 ## Learning Goals
 
